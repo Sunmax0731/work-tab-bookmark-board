@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "作業タブ・ブックマークボード",
+  "version": "0.1.0",
+  "description": "タブ群、参考ページ、管理画面を作業単位で保存復元する。入力、確認、履歴保存、次アクションを同じ作業単位で扱えるようにする。",
+  "permissions": [
+    "storage",
+    "activeTab"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  }
+}

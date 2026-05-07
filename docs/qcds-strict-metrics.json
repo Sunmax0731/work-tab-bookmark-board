@@ -1,0 +1,237 @@
+{
+  "repository": "work-tab-bookmark-board",
+  "title": "作業タブ・ブックマークボード",
+  "benchmarkRepos": [
+    "Sunmax0731/release-output-check-flow",
+    "Sunmax0731/git-release-publish-assistant",
+    "Sunmax0731/movie-telop-transcriber",
+    "Sunmax0731/codex-remote-android"
+  ],
+  "scenarioResults": [
+    {
+      "id": "happy-path",
+      "purpose": "正常な入力が passed になることを確認する。",
+      "expected": {
+        "result": "passed",
+        "errors": 0,
+        "warnings": 0
+      },
+      "actual": {
+        "result": "passed",
+        "errors": 0,
+        "warnings": 0,
+        "totalItems": 1
+      },
+      "pass": true
+    },
+    {
+      "id": "missing-required",
+      "purpose": "必須項目不足を error として検出する。",
+      "expected": {
+        "result": "failed",
+        "errors": 1,
+        "warnings": 0
+      },
+      "actual": {
+        "result": "failed",
+        "errors": 1,
+        "warnings": 0,
+        "totalItems": 1
+      },
+      "pass": true
+    },
+    {
+      "id": "warning",
+      "purpose": "blocked 状態と推奨項目不足を warning として検出する。",
+      "expected": {
+        "result": "warning",
+        "errors": 0,
+        "warnings": 2
+      },
+      "actual": {
+        "result": "warning",
+        "errors": 0,
+        "warnings": 2,
+        "totalItems": 1
+      },
+      "pass": true
+    },
+    {
+      "id": "mixed-batch",
+      "purpose": "正常、必須項目不足、warning の混在バッチを集計する。",
+      "expected": {
+        "result": "failed",
+        "errors": 1,
+        "warnings": 2
+      },
+      "actual": {
+        "result": "failed",
+        "errors": 1,
+        "warnings": 2,
+        "totalItems": 3
+      },
+      "pass": true
+    }
+  ],
+  "dimensions": {
+    "quality": {
+      "label": "Quality",
+      "score": 100,
+      "grade": "S+",
+      "passed": 6,
+      "expected": 6,
+      "checks": [
+        {
+          "id": "automated-tests",
+          "pass": true,
+          "detail": "node --test が通過"
+        },
+        {
+          "id": "representative-suite-shape",
+          "pass": true,
+          "detail": "代表シナリオが4種類そろっている"
+        },
+        {
+          "id": "representative-suite-results",
+          "pass": true,
+          "detail": "代表シナリオの期待結果と実測が一致"
+        },
+        {
+          "id": "implementation-responsibility",
+          "pass": true,
+          "detail": "責務分割ファイルがそろっている"
+        },
+        {
+          "id": "regression-baseline",
+          "pass": true,
+          "detail": "回帰baselineを生成"
+        },
+        {
+          "id": "text-clean",
+          "pass": true,
+          "detail": "文字化け検査対象"
+        }
+      ]
+    },
+    "cost": {
+      "label": "Cost",
+      "score": 100,
+      "grade": "S+",
+      "passed": 6,
+      "expected": 6,
+      "checks": [
+        {
+          "id": "lean-package",
+          "pass": true,
+          "detail": "runtime依存なし"
+        },
+        {
+          "id": "install-guide",
+          "pass": true,
+          "detail": "導入手順あり"
+        },
+        {
+          "id": "local-run",
+          "pass": true,
+          "detail": "npm test と npm start で再現可能"
+        },
+        {
+          "id": "representative-sample",
+          "pass": true,
+          "detail": "代表サンプルあり"
+        },
+        {
+          "id": "metrics-output",
+          "pass": true,
+          "detail": "metricsを生成"
+        },
+        {
+          "id": "docs-packaging",
+          "pass": true,
+          "detail": "docs ZIPあり"
+        }
+      ]
+    },
+    "delivery": {
+      "label": "Delivery",
+      "score": 100,
+      "grade": "S+",
+      "passed": 6,
+      "expected": 6,
+      "checks": [
+        {
+          "id": "readme-strict-links",
+          "pass": true,
+          "detail": "READMEから厳格QCDS docsへ誘導"
+        },
+        {
+          "id": "release-checklist",
+          "pass": true,
+          "detail": "リリースチェックあり"
+        },
+        {
+          "id": "pre-release",
+          "pass": true,
+          "detail": "リリース前準備あり"
+        },
+        {
+          "id": "traceability",
+          "pass": true,
+          "detail": "traceabilityあり"
+        },
+        {
+          "id": "remote-benchmark",
+          "pass": true,
+          "detail": "remote benchmarkあり"
+        },
+        {
+          "id": "qcds-tool",
+          "pass": true,
+          "detail": "QCDS評価ツールあり"
+        }
+      ]
+    },
+    "satisfaction": {
+      "label": "Satisfaction",
+      "score": 100,
+      "grade": "S+",
+      "passed": 6,
+      "expected": 6,
+      "checks": [
+        {
+          "id": "user-guide",
+          "pass": true,
+          "detail": "ユーザーガイドあり"
+        },
+        {
+          "id": "manual-test",
+          "pass": true,
+          "detail": "手動テスト手順あり"
+        },
+        {
+          "id": "ui-ux-polish",
+          "pass": true,
+          "detail": "UI/UX polishあり"
+        },
+        {
+          "id": "security-privacy",
+          "pass": true,
+          "detail": "security/privacyあり"
+        },
+        {
+          "id": "competitive-benchmark",
+          "pass": true,
+          "detail": "競合比較あり"
+        },
+        {
+          "id": "agent-skill-lessons",
+          "pass": true,
+          "detail": "運用ルールあり"
+        }
+      ]
+    }
+  },
+  "overallScore": 100,
+  "overallGrade": "S+",
+  "generatedAt": "2026-05-08T00:00:00+09:00"
+}

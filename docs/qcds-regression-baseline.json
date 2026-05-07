@@ -1,0 +1,69 @@
+{
+  "repository": "work-tab-bookmark-board",
+  "scenarioResults": [
+    {
+      "id": "happy-path",
+      "purpose": "正常な入力が passed になることを確認する。",
+      "expected": {
+        "result": "passed",
+        "errors": 0,
+        "warnings": 0
+      },
+      "actual": {
+        "result": "passed",
+        "errors": 0,
+        "warnings": 0,
+        "totalItems": 1
+      },
+      "pass": true
+    },
+    {
+      "id": "missing-required",
+      "purpose": "必須項目不足を error として検出する。",
+      "expected": {
+        "result": "failed",
+        "errors": 1,
+        "warnings": 0
+      },
+      "actual": {
+        "result": "failed",
+        "errors": 1,
+        "warnings": 0,
+        "totalItems": 1
+      },
+      "pass": true
+    },
+    {
+      "id": "warning",
+      "purpose": "blocked 状態と推奨項目不足を warning として検出する。",
+      "expected": {
+        "result": "warning",
+        "errors": 0,
+        "warnings": 2
+      },
+      "actual": {
+        "result": "warning",
+        "errors": 0,
+        "warnings": 2,
+        "totalItems": 1
+      },
+      "pass": true
+    },
+    {
+      "id": "mixed-batch",
+      "purpose": "正常、必須項目不足、warning の混在バッチを集計する。",
+      "expected": {
+        "result": "failed",
+        "errors": 1,
+        "warnings": 2
+      },
+      "actual": {
+        "result": "failed",
+        "errors": 1,
+        "warnings": 2,
+        "totalItems": 3
+      },
+      "pass": true
+    }
+  ]
+}
