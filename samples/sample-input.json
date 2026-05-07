@@ -1,0 +1,19 @@
+{
+  "product": {
+    "repository": "work-tab-bookmark-board",
+    "title": "作業タブ・ブックマークボード"
+  },
+  "items": [
+    {
+      "id": "ok-1",
+      "title": "作業タブ・ブックマークボード 正常ケース",
+      "source": "source-ok",
+      "tabs": "tabs-ok",
+      "project": "project-ok",
+      "owner": "owner-ok",
+      "acceptance": "acceptance-ok",
+      "status": "ready",
+      "restorePolicy": "ready"
+    }
+  ]
+}

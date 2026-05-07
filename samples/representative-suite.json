@@ -1,0 +1,112 @@
+[
+  {
+    "id": "happy-path",
+    "purpose": "正常な入力が passed になることを確認する。",
+    "expected": {
+      "result": "passed",
+      "errors": 0,
+      "warnings": 0
+    },
+    "items": [
+      {
+        "id": "ok-1",
+        "title": "作業タブ・ブックマークボード 正常ケース",
+        "source": "source-ok",
+        "tabs": "tabs-ok",
+        "project": "project-ok",
+        "owner": "owner-ok",
+        "acceptance": "acceptance-ok",
+        "status": "ready",
+        "restorePolicy": "ready"
+      }
+    ]
+  },
+  {
+    "id": "missing-required",
+    "purpose": "必須項目不足を error として検出する。",
+    "expected": {
+      "result": "failed",
+      "errors": 1,
+      "warnings": 0
+    },
+    "items": [
+      {
+        "id": "missing-1",
+        "title": "必須項目不足ケース",
+        "source": "",
+        "tabs": "tabs-ok",
+        "project": "project-ok",
+        "owner": "owner-ok",
+        "acceptance": "acceptance-ok",
+        "status": "ready",
+        "restorePolicy": "ready"
+      }
+    ]
+  },
+  {
+    "id": "warning",
+    "purpose": "blocked 状態と推奨項目不足を warning として検出する。",
+    "expected": {
+      "result": "warning",
+      "errors": 0,
+      "warnings": 2
+    },
+    "items": [
+      {
+        "id": "warning-1",
+        "title": "warning ケース",
+        "source": "source-ok",
+        "tabs": "tabs-ok",
+        "project": "project-ok",
+        "owner": "owner-ok",
+        "acceptance": "acceptance-ok",
+        "status": "blocked",
+        "restorePolicy": ""
+      }
+    ]
+  },
+  {
+    "id": "mixed-batch",
+    "purpose": "正常、必須項目不足、warning の混在バッチを集計する。",
+    "expected": {
+      "result": "failed",
+      "errors": 1,
+      "warnings": 2
+    },
+    "items": [
+      {
+        "id": "ok-1",
+        "title": "作業タブ・ブックマークボード 正常ケース",
+        "source": "source-ok",
+        "tabs": "tabs-ok",
+        "project": "project-ok",
+        "owner": "owner-ok",
+        "acceptance": "acceptance-ok",
+        "status": "ready",
+        "restorePolicy": "ready"
+      },
+      {
+        "id": "missing-1",
+        "title": "必須項目不足ケース",
+        "source": "",
+        "tabs": "tabs-ok",
+        "project": "project-ok",
+        "owner": "owner-ok",
+        "acceptance": "acceptance-ok",
+        "status": "ready",
+        "restorePolicy": "ready"
+      },
+      {
+        "id": "warning-1",
+        "title": "warning ケース",
+        "source": "source-ok",
+        "tabs": "tabs-ok",
+        "project": "project-ok",
+        "owner": "owner-ok",
+        "acceptance": "acceptance-ok",
+        "status": "blocked",
+        "restorePolicy": ""
+      }
+    ]
+  }
+]
