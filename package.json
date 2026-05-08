@@ -5,9 +5,11 @@
   "type": "module",
   "description": "作業タブ・ブックマークボード の検証ハーネス付きプレリリース実装",
   "scripts": {
-    "test": "node --test tests/*.test.mjs && node tools/qcds-evaluate.mjs --allow-missing-zip && node tools/package-docs.mjs && node tools/qcds-evaluate.mjs && node tools/package-docs.mjs && node tools/mojibake-check.mjs",
+    "test": "node --test tests/*.test.mjs && node tools/qcds-evaluate.mjs --allow-missing-zip && node tools/package-docs.mjs && node tools/qcds-evaluate.mjs && node tools/package-docs.mjs && node tools/mojibake-check.mjs && node tools/platform-runtime-gate.mjs && node tools/closed-alpha-guard.mjs",
     "validate": "npm test",
-    "start": "node src/cli.mjs samples/sample-input.json dist/run"
+    "start": "node src/cli.mjs samples/sample-input.json dist/run",
+    "platform:gate": "node tools/platform-runtime-gate.mjs",
+    "closed-alpha:guard": "node tools/closed-alpha-guard.mjs"
   },
   "keywords": [
     "chromeextension",

@@ -1,0 +1,32 @@
+{
+  "product": "work-tab-bookmark-board",
+  "repository": "Sunmax0731/work-tab-bookmark-board",
+  "githubUrl": "https://github.com/Sunmax0731/work-tab-bookmark-board",
+  "tag": "v0.1.0-alpha.1",
+  "releaseUrl": "https://github.com/Sunmax0731/work-tab-bookmark-board/releases/tag/v0.1.0-alpha.1",
+  "prerelease": true,
+  "latest": false,
+  "assetCount": 3,
+  "assets": [
+    "work-tab-bookmark-board-docs.zip",
+    "manual-test.md",
+    "strict-manual-test-addendum.md"
+  ],
+  "platformRuntimeGate": "dist/platform-runtime-gate-result.json",
+  "platformType": "chrome-extension",
+  "manualTest": "not-run-by-codex",
+  "qcdsEvaluation": {
+    "Quality": "S-",
+    "Cost": "S-",
+    "Delivery": "S-",
+    "Satisfaction": "S-",
+    "capReason": "manual-test-not-run-by-codex"
+  },
+  "github": {
+    "repo": "Sunmax0731/work-tab-bookmark-board",
+    "url": "https://github.com/Sunmax0731/work-tab-bookmark-board",
+    "releaseUrl": "https://github.com/Sunmax0731/work-tab-bookmark-board/releases/tag/v0.1.0-alpha.1",
+    "prerelease": true,
+    "latest": false
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "product": "work-tab-bookmark-board",
+  "title": "作業タブ・ブックマークボード",
+  "domain": "ChromeExtension",
+  "ideaNo": 1,
+  "platformType": "chrome-extension",
+  "expectedPublicTarget": "Chrome Web Store",
+  "browser": null,
+  "android": null,
+  "evidence": "dist/platform-runtime-gate-result.json"
+}
